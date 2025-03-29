@@ -265,7 +265,22 @@ button {
 .navbar-light .navbar-nav .nav-link.active,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .show>.nav-link {
-    color: #041151;
+    color: #734765;
+    font-weight: 600;
+    position: relative;
+}
+
+.navbar-light .navbar-nav .active>.nav-link:after,
+.navbar-light .navbar-nav .nav-link.active:after,
+.navbar-light .navbar-nav .nav-link.show:after,
+.navbar-light .navbar-nav .show>.nav-link:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 20px;
+    right: 20px;
+    height: 2px;
+    background-color: #734765;
 }
 
 .navbar-expand-lg .navbar-collapse {
@@ -283,7 +298,7 @@ button.donate_btn {
     font-size: 18px;
     color: #666666;
     background: transparent;
-    border: 1px solid #f64646;
+    border: 1px solid #734765;
 }
 
 .bg-light {
@@ -335,19 +350,19 @@ button.donate_btn {
     text-align: center;
 }
 
-.read_bt a {
+.read_bt a {s
     width: 100%;
     float: left;
     text-align: center;
     font-size: 16px;
     color: #ffffff;
-    background-color: #f64646;
+    background-color: #734765;
     padding: 8px 0px;
     text-transform: uppercase;
 }
 
 .read_bt a:hover {
-    background-color: #120a78;
+    background-color: #734765;
 }
 
 .carousel-indicators {
@@ -416,7 +431,7 @@ button.donate_btn {
     text-align: center;
     font-size: 16px;
     color: #ffffff;
-    background-color: #120a78;
+    background-color: #734765;
     padding: 8px 40px;
     text-transform: uppercase;
     margin-top: 20px;
@@ -425,7 +440,7 @@ button.donate_btn {
 }
 
 .send_bt a:hover {
-    background-color: #f64646;
+    background-color: #734765;
 }
 
 .fundraise_section_main {
@@ -442,7 +457,7 @@ button.donate_btn {
 
 .box_main {
     width: 100%;
-    background-color: #120a78;
+    background-color: #734765;
     clip-path: polygon(100% 0, 100% 75%, 50% 100%, 0 75%, 0 0);
     height: auto;
     padding: 30px 20px 70px 20px;
@@ -488,11 +503,11 @@ button.donate_btn {
 }
 
 .box_main:hover {
-    background-color: #f64646;
+    background-color: #734765;
 }
 
 .box_main.active {
-    background-color: #f64646;
+    background-color: #734765;
 }
 
 
@@ -504,7 +519,7 @@ button.donate_btn {
 .about_section {
     width: 100%;
     float: left;
-    background-color: #120a78;
+    background-color: #734765;
     padding-bottom: 90px;
 }
 
@@ -552,7 +567,7 @@ button.donate_btn {
 }
 
 .readmore_bt a:hover {
-    background-color: #f64646;
+    background-color: #734765;
 }
 
 
@@ -610,7 +625,7 @@ button.donate_btn {
     width: 100%;
     opacity: 0;
     transition: .5s ease;
-    background-color: rgb(241, 89, 88, 0.9);
+    background-color: rgba(115, 71, 101, 0.9);
 }
 
 .container_main:hover .overlay {
@@ -659,7 +674,7 @@ button.donate_btn {
     text-align: center;
     font-size: 14px;
     color: #ffffff;
-    background-color: #f64646;
+    background-color: #734765;
     border: 2px solid #ffffff;
     padding: 8px;
     text-transform: uppercase;
@@ -667,7 +682,7 @@ button.donate_btn {
 
 .donate_bt a:hover {
     color: #ffffff;
-    background-color: #f64646;
+    background-color: #734765;
 }
 
 
@@ -729,7 +744,7 @@ button.donate_btn {
     width: 100%;
     float: left;
     font-size: 20px;
-    color: #120a78;
+    color: #734765;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
@@ -737,7 +752,7 @@ button.donate_btn {
 }
 
 .goal_text {
-    color: #f64646;
+    color: #734765;
     padding-left: 20px;
 }
 
@@ -758,7 +773,7 @@ button.donate_btn {
     text-align: center;
     font-size: 14px;
     color: #ffffff;
-    background-color: #120a78;
+    background-color: #734765;
     border: 2px solid #ffffff;
     padding: 8px;
     text-transform: uppercase;
@@ -766,7 +781,7 @@ button.donate_btn {
 
 .readmore_btn a:hover {
     color: #ffffff;
-    background-color: #120a78;
+    background-color: #734765;
 }
 
 .readmore_btn_1 {
@@ -781,15 +796,15 @@ button.donate_btn {
     text-align: center;
     font-size: 14px;
     color: #ffffff;
-    background-color: #f64646;
-    border: 2px solid #ffffff;
+    background-color: #734765;
+    border: 1px solid #734765;
     padding: 8px;
     text-transform: uppercase;
 }
 
 .readmore_btn_1 a:hover {
     color: #ffffff;
-    background-color: #120a78;
+    background-color: #734765;
 }
 
 
@@ -832,10 +847,11 @@ button.donate_btn {
     width: 100%;
     float: left;
     font-size: 20px;
-    color: #120a78;
+    color: #734765;
     font-weight: bold;
     text-transform: uppercase;
     font-family: 'Open Sans', sans-serif;
+    padding-top: 20px;
 }
 
 .img_7 {
@@ -862,18 +878,18 @@ button.donate_btn {
     text-align: center;
     font-size: 14px;
     color: #ffffff;
-    background-color: #120a78;
+    background-color: #734765;
     padding: 8px;
     text-transform: uppercase;
 }
 
 .date_text a:hover {
     color: #ffffff;
-    background-color: #f64646;
+    background-color: #734765;
 }
 
 .date_text.active a {
-    background-color: #f64646;
+    background-color: #734765;
 }
 
 
@@ -885,10 +901,8 @@ button.donate_btn {
 .donate_section {
     width: 100%;
     float: left;
-    background-image: url(../images/donate-bg.png);
+    background-color: #734765;
     height: auto;
-    background-repeat: no-repeat;
-    background-size: 100%;
     padding-bottom: 90px;
 }
 
@@ -938,7 +952,7 @@ button.donate_btn {
     left: 0;
     width: 60px;
     height: 3px;
-    background-color: #f64646;
+    background-color: #734765;
 }
 
 .dummy_text {
@@ -958,29 +972,29 @@ button.donate_btn {
     left: 0;
     top: -5px;
     font-size: 40px;
-    color: #f64646;
+    color: #734765;
     font-family: serif;
 }
 
 #main_slider a.carousel-control-next {
     position: absolute;
-    right: -89px;
-    top: 23%;
-    background-color: #120a78;
+    right: -94px;
+    top: 40%;
+    background-color: #734765;
 }
 
 #main_slider a.carousel-control-prev {
     position: absolute;
-    right: -89px;
-    top: 52%;
-    left: initial;
+    left: -94px;
+    top: 40%;
+    background-color: #734765;
 }
 
 #main_slider .carousel-control-prev,
 #main_slider .carousel-control-next {
     width: 68px;
     height: 68px;
-    background: #f64646;
+    background: #734765;
     opacity: 1;
     font-size: 30px;
     color: #ffffff;
@@ -990,8 +1004,8 @@ button.donate_btn {
 #main_slider .carousel-control-next:hover,
 #main_slider .carousel-control-prev:focus,
 #main_slider .carousel-control-next:focus {
-    background: #120a78;
-    color: #ffffff;
+    background: #734765;
+    color: #fff;
 }
 
 
@@ -1058,19 +1072,19 @@ button.donate_btn {
 .send_bt_1 a {
     width: 100%;
     float: left;
-    background-color: #7c2c0c;
+    background-color: #734765;
     color: #ffffff;
     text-align: center;
     padding: 10px 0px;
     font-size: 16px;
     margin-top: 40px;
-    border: 1px solid #7c2c0c;
+    border: 1px solid #734765;
     font-weight: 500;
 }
 
 .send_bt_1 a:hover {
     background-color: transparent;
-    color: #7c2c0c;
+    color: #734765;
 }
 
 .map_main {
@@ -1176,7 +1190,7 @@ button.donate_btn {
     width: 10px;
     height: 10px;
     content: "";
-    background-color: #f64646;
+    background-color: #734765;
     position: absolute;
     left: -20px;
     top: 27%;
@@ -1204,7 +1218,7 @@ input.address_text::placeholder {
     width: 40%;
     float: right;
     font-size: 18px;
-    color: #f64646;
+    color: #734765;
     background-color: transparent;
     padding: 10px 0px;
     text-align: center;
@@ -1314,22 +1328,22 @@ img[src*="logo"] {
   width: auto;
   margin: 30px auto;
   padding: 12px 40px;
-  background-color: #f26522;
+  background-color: #734765;
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
   text-align: center;
   text-transform: uppercase;
   border-radius: 30px;
-  box-shadow: 0 4px 15px rgba(242, 101, 34, 0.3);
+  box-shadow: 0 4px 15px rgba(115, 71, 101, 0.3);
   transition: all 0.3s ease;
 }
 
 .services_learn_more:hover {
-  background-color: #d14d0d;
+  background-color: #60395a;
   color: #ffffff;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(242, 101, 34, 0.4);
+  box-shadow: 0 6px 20px rgba(115, 71, 101, 0.4);
 }
 
 .program-card {
@@ -1381,7 +1395,7 @@ img[src*="logo"] {
   left: 0;
   width: 60px;
   height: 3px;
-  background-color: #f26522;
+  background-color: #734765;
 }
 
 .program-text {
@@ -1394,7 +1408,7 @@ img[src*="logo"] {
 .program-support {
   display: inline-block;
   padding: 10px 25px;
-  background-color: #f26522;
+  background-color: #734765;
   color: #fff;
   font-weight: 500;
   border-radius: 5px;
@@ -1403,10 +1417,10 @@ img[src*="logo"] {
 }
 
 .program-support:hover {
-  background-color: #d14d0d;
+  background-color: #60395a;
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(242, 101, 34, 0.3);
+  box-shadow: 0 5px 15px rgba(115, 71, 101, 0.3);
 }
 
 @media (max-width: 768px) {
@@ -1447,14 +1461,14 @@ img[src*="logo"] {
   left: 0;
   width: 5px;
   height: 100%;
-  background-color: #f26522;
+  background-color: #734765;
 }
 
 .reach-icon {
   margin-bottom: 20px;
   width: 60px;
   height: 60px;
-  background-color: rgba(242, 101, 34, 0.1);
+  background-color: rgba(115, 71, 101, 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -1463,7 +1477,7 @@ img[src*="logo"] {
 
 .reach-icon i {
   font-size: 28px;
-  color: #f26522;
+  color: #734765;
 }
 
 .reach-title {
@@ -1529,7 +1543,7 @@ img[src*="logo"] {
 
 .view_all_btn {
   display: inline-block;
-  background-color: #f26522;
+  background-color: #734765;
   color: #ffffff;
   width: auto;
   height: auto;
@@ -1538,7 +1552,7 @@ img[src*="logo"] {
   border-radius: 30px;
   text-transform: uppercase;
   margin-top: 20px;
-  box-shadow: 0 4px 15px rgba(242, 101, 34, 0.3);
+  box-shadow: 0 4px 15px rgba(115, 71, 101, 0.3);
   transition: all 0.3s ease;
 }
 
@@ -1547,9 +1561,9 @@ img[src*="logo"] {
 }
 
 .view_all_btn:hover {
-  background-color: #d14d0d;
+  background-color: #60395a;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(242, 101, 34, 0.4);
+  box-shadow: 0 6px 20px rgba(115, 71, 101, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -1598,7 +1612,7 @@ img[src*="logo"] {
 
 .contact_content a:hover {
   text-decoration: underline;
-  color: #f64646;
+  color: #734765;
 }
 
 /* Join Us Page Styles */
@@ -1607,7 +1621,7 @@ img[src*="logo"] {
   border-radius: 8px;
   background-color: #f9f9f9;
   transition: all 0.3s ease;
-  border-left: 3px solid #f64646;
+  border-left: 3px solid #734765;
 }
 
 .help-item:hover {
