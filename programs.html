@@ -244,6 +244,168 @@
                   </div>
                </div>
             </div> -->
+            
+            <!-- Add India map with highlighted states -->
+            <div class="row mt-5">
+               <div class="col-12 text-center mb-4">
+                  <h3 class="reach-title">Our Presence Across India</h3>
+                  <p class="reach-text">Currently operating in 7 states with plans for nationwide expansion</p>
+               </div>
+               <div class="col-md-6">
+                  <div class="india-map-container text-center">
+                     <!-- Include Leaflet CSS and JS -->
+                     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+                     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+                     
+                     <div id="india-map" style="height: 400px; width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"></div>
+                     
+                     <script>
+                       // Initialize map when document is loaded
+                       document.addEventListener('DOMContentLoaded', function() {
+                         // Initialize map centered on India
+                         const map = L.map('india-map', {
+                           zoomControl: true,
+                           attributionControl: true,
+                           // Disable dragging/zooming beyond India
+                           maxBounds: [
+                             [6, 68], // Southwest
+                             [38, 98]  // Northeast
+                           ],
+                           maxZoom: 7,
+                           minZoom: 4
+                         }).setView([23.5, 82], 4); // Adjusted center and zoom to show all states including Assam
+                         
+                         // Add custom tile layer with minimal labels and styling
+                         L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+                           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+                           subdomains: 'abcd'
+                         }).addTo(map);
+                         
+                         // Add custom styling to hide internal boundaries
+                         const style = document.createElement('style');
+                         style.textContent = `
+                           .leaflet-tile-pane {
+                             opacity: 0.6;
+                             filter: saturate(0.5) brightness(1.1);
+                           }
+                           .state-label {
+                             background-color: rgba(255, 255, 255, 0.9);
+                             border: 1px solid #734765;
+                             border-radius: 4px;
+                             box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+                             font-weight: bold;
+                             color: #734765;
+                             font-size: 12px;
+                             padding: 4px 8px;
+                             transition: opacity 0s !important;
+                           }
+                           
+                           /* Remove Leaflet's default animations */
+                           .leaflet-tooltip {
+                             transition: none !important;
+                             animation: none !important;
+                           }
+                         `;
+                         document.head.appendChild(style);
+                         
+                         // Define state coordinates
+                         const states = [
+                           { name: 'Delhi', lat: 28.7041, lng: 77.1025 },
+                           { name: 'Uttar Pradesh', lat: 26.8467, lng: 80.9462 },
+                           { name: 'Haryana', lat: 29.0588, lng: 76.0856 },
+                           { name: 'Assam', lat: 26.2006, lng: 92.9376 },
+                           { name: 'Jharkhand', lat: 23.6102, lng: 85.2799 },
+                           { name: 'Odisha', lat: 20.9517, lng: 85.0985 },
+                           { name: 'Madhya Pradesh', lat: 22.9734, lng: 78.6569 }
+                         ];
+                         
+                         // Add custom markers for each state
+                         states.forEach(state => {
+                           // Add a larger transparent circle for better hover detection
+                           const hoverArea = L.circle([state.lat, state.lng], {
+                             radius: 100000,
+                             fillColor: '#734765',
+                             fillOpacity: 0.1,
+                             color: 'transparent',
+                             weight: 0
+                           }).addTo(map);
+                           
+                           // Add tooltip to the hover area
+                           hoverArea.bindTooltip(state.name, {
+                             permanent: false,
+                             direction: 'top',
+                             className: 'state-label',
+                             offset: [0, -10],
+                             opacity: 1.0
+                           });
+                           
+                           // Add visible circular marker
+                           const marker = L.circleMarker([state.lat, state.lng], {
+                             radius: 8,
+                             fillColor: '#734765',
+                             color: '#ffffff',
+                             weight: 2,
+                             opacity: 1,
+                             fillOpacity: 0.8
+                           }).addTo(map);
+                           
+                           // Add the same tooltip to the marker as a fallback
+                           marker.bindTooltip(state.name, {
+                             permanent: false,
+                             direction: 'top',
+                             className: 'state-label',
+                             offset: [0, -10],
+                             opacity: 1.0
+                           });
+                           
+                           // Add popup with name on click (for both hover area and marker)
+                           const popupContent = `<strong>${state.name}</strong>`;
+                           hoverArea.bindPopup(popupContent);
+                           marker.bindPopup(popupContent);
+                         });
+                       });
+                     </script>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="states-list">
+                     <h4 class="mb-4">States We Serve:</h4>
+                     <ul class="list-unstyled">
+                        <li class="d-flex align-items-center mb-3">
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-name"><strong>Delhi</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-name"><strong>Uttar Pradesh</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-name"><strong>Haryana</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-name"><strong>Assam</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-name"><strong>Jharkhand</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-name"><strong>Odisha</strong></span>
+                        </li>
+                        <li class="d-flex align-items-center mb-3">
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-name"><strong>Madhya Pradesh</strong></span>
+                        </li>
+                     </ul>
+                     <div class="text-center mt-4">
+                        <a href="donate.html" class="program-support">Support Our Expansion</a>
+                     </div>
+                  </div>
+               </div>
+            </div>
          </div>
       </div>
       <!-- Our Reach section end -->
