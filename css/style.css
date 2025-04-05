@@ -1126,8 +1126,9 @@ button.donate_btn {
 .footer_section {
     width: 100%;
     float: left;
-    background-color: #222122;
+    background-color: #444444;
     height: auto;
+    padding-bottom: 30px;
 }
 
 .social_icon {
