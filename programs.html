@@ -100,14 +100,14 @@
             <div class="row">
                <div class="col-sm-12">
                   <h1 class="mission_taital">Community Outreach Programs</h1>
-                  <p class="mission_text">Our outreach programs aim to spread awareness, provide preventive healthcare, and support those in need.</p>
+                  <p class="mission_text" style="margin-bottom: 30px;">Our outreach programs aim to spread awareness, provide preventive healthcare, and support those in need.</p>
                </div>
             </div>
             
             <!-- Program 1: Door-to-Door Awareness Campaigns -->
             <div class="program-card">
                <div class="program-image">
-                  <img src="images/img-1.png" alt="Door-to-Door Awareness Campaigns">
+                  <img src="images/img-9.jpg" alt="Door-to-Door Awareness Campaigns">
                </div>
                <div class="program-content">
                   <h3 class="program-title">Door-to-Door Awareness Campaigns</h3>
@@ -124,14 +124,14 @@
                   <a href="donate.html" class="program-support">Support Us</a>
                </div>
                <div class="program-image">
-                  <img src="images/img-2.png" alt="School Health Programs">
+                  <img src="images/img-10.jpg" alt="School Health Programs">
                </div>
             </div>
             
             <!-- Program 3: Women's Self-Help Groups -->
             <div class="program-card">
                <div class="program-image">
-                  <img src="images/img-3.png" alt="Women's Self-Help Groups">
+                  <img src="images/img-11.jpg" alt="Women's Self-Help Groups">
                </div>
                <div class="program-content">
                   <h3 class="program-title">Women's Self-Help Groups</h3>
@@ -148,14 +148,14 @@
                   <a href="donate.html" class="program-support">Support Us</a>
                </div>
                <div class="program-image">
-                  <img src="images/img-4.png" alt="Cancer Survivor Support Groups">
+                  <img src="images/img-12.jpg" alt="Cancer Survivor Support Groups">
                </div>
             </div>
             
             <!-- Program 5: Corporate Wellness Initiatives -->
             <div class="program-card">
                <div class="program-image">
-                  <img src="images/img-5.png" alt="Corporate Wellness Initiatives">
+                  <img src="images/img-13.jpg" alt="Corporate Wellness Initiatives">
                </div>
                <div class="program-content">
                   <h3 class="program-title">Corporate Wellness Initiatives</h3>
@@ -172,7 +172,7 @@
                   <a href="donate.html" class="program-support">Support Us</a>
                </div>
                <div class="program-image">
-                  <img src="images/img-6.png" alt="Free Health Checkup Camps">
+                  <img src="images/img-14.jpg" alt="Free Health Checkup Camps">
                </div>
             </div>
             
@@ -292,26 +292,26 @@
                            minZoom: 4
                          }).setView([23.5, 82], 4); // Adjusted center and zoom to show all states including Assam
                          
-                         // Add custom tile layer with minimal labels and styling
+                         // Add custom tile layer with boundaries but no labels
                          L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
                            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
                            subdomains: 'abcd'
                          }).addTo(map);
                          
-                         // Add custom styling to hide internal boundaries
+                         // Add custom styling to make boundaries more visible
                          const style = document.createElement('style');
                          style.textContent = `
                            .leaflet-tile-pane {
-                             opacity: 0.6;
-                             filter: saturate(0.5) brightness(1.1);
+                             opacity: 1;
+                             filter: saturate(0.6) brightness(0.95) contrast(1.2);
                            }
                            .state-label {
                              background-color: rgba(255, 255, 255, 0.9);
-                             border: 1px solid #734765;
+                             border: 1px solid #d12670;
                              border-radius: 4px;
                              box-shadow: 0 1px 3px rgba(0,0,0,0.2);
                              font-weight: bold;
-                             color: #734765;
+                             color: #d12670;
                              font-size: 12px;
                              padding: 4px 8px;
                              transition: opacity 0s !important;
@@ -341,7 +341,7 @@
                            // Add a larger transparent circle for better hover detection
                            const hoverArea = L.circle([state.lat, state.lng], {
                              radius: 100000,
-                             fillColor: '#734765',
+                             fillColor: '#d12670',
                              fillOpacity: 0.1,
                              color: 'transparent',
                              weight: 0
@@ -359,7 +359,7 @@
                            // Add visible circular marker
                            const marker = L.circleMarker([state.lat, state.lng], {
                              radius: 8,
-                             fillColor: '#734765',
+                             fillColor: '#d12670',
                              color: '#ffffff',
                              weight: 2,
                              opacity: 1,
@@ -389,31 +389,31 @@
                      <h4 class="mb-4">States We Serve:</h4>
                      <ul class="list-unstyled">
                         <li class="d-flex align-items-center mb-3">
-                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #d12670; border-radius: 50%; margin-right: 10px;"></span>
                            <span class="state-name"><strong>Delhi</strong></span>
                         </li>
                         <li class="d-flex align-items-center mb-3">
-                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #d12670; border-radius: 50%; margin-right: 10px;"></span>
                            <span class="state-name"><strong>Uttar Pradesh</strong></span>
                         </li>
                         <li class="d-flex align-items-center mb-3">
-                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #d12670; border-radius: 50%; margin-right: 10px;"></span>
                            <span class="state-name"><strong>Haryana</strong></span>
                         </li>
                         <li class="d-flex align-items-center mb-3">
-                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #d12670; border-radius: 50%; margin-right: 10px;"></span>
                            <span class="state-name"><strong>Assam</strong></span>
                         </li>
                         <li class="d-flex align-items-center mb-3">
-                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #d12670; border-radius: 50%; margin-right: 10px;"></span>
                            <span class="state-name"><strong>Jharkhand</strong></span>
                         </li>
                         <li class="d-flex align-items-center mb-3">
-                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #d12670; border-radius: 50%; margin-right: 10px;"></span>
                            <span class="state-name"><strong>Odisha</strong></span>
                         </li>
                         <li class="d-flex align-items-center mb-3">
-                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #734765; border-radius: 50%; margin-right: 10px;"></span>
+                           <span class="state-marker" style="display: inline-block; width: 15px; height: 15px; background-color: #d12670; border-radius: 50%; margin-right: 10px;"></span>
                            <span class="state-name"><strong>Madhya Pradesh</strong></span>
                         </li>
                      </ul>

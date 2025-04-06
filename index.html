@@ -47,7 +47,7 @@
          .read_bt a, .carousel-item .read_bt a {
             display: inline-block;
             padding: 8px 20px;
-            background-color: #734765;
+            background-color: #d12670;
             color: #ffffff;
             font-size: 16px;
             font-weight: 500;
@@ -74,6 +74,45 @@
             height: auto;
             margin-bottom: 25px;
             margin-top: 10px;
+         }
+         
+         /* Adjust background image position */
+         .banner_section {
+            background-position: 100% center !important;
+            background-size: cover !important;
+         }
+         
+         /* Fix program buttons consistency and hover effects */
+         .donate_btn_main {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+         }
+         
+         .donate_btn_main .readmore_btn {
+            width: 250px;
+         }
+         
+         .readmore_btn a {
+            display: block;
+            width: 100%;
+            padding: 12px 0;
+            text-align: center;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            border-radius: 5px;
+            text-transform: uppercase;
+            background-color: #d12670;
+            box-shadow: 0 2px 6px rgba(209, 38, 112, 0.3);
+            width: 180px;
+         }
+         
+         .readmore_btn a:hover {
+            background-color: #555555;
+            color: #ffffff;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.25);
          }
       </style>
    </head>
@@ -129,9 +168,9 @@
                   <div class="carousel-item active">
                      <div class="row">
                         <div class="col-sm-12">
-                           <h1 class="banner_taital">Welcome to CCCF</h1>
+                           <h1 class="banner_taital">WELCOME<br>TO<br>CCCF</h1>
                            <p class="banner_text">Dedicated to the early detection and prevention of cancer and anemia. Our mission is to provide accessible screening services for breast, cervical, and oral cancers in women, along with anemia screening in children throughout India.</p>
-                           <div class="read_bt"><a href="about.html">Learn More</a></div>
+                           <div class="read_bt"><a href="about.html" style="background-color: #555555;">Learn More</a></div>
                         </div>
                      </div>
                   </div>
@@ -140,7 +179,7 @@
                         <div class="col-sm-12">
                            <h1 class="banner_taital">Early Detection Saves Lives</h1>
                            <p class="banner_text">"Early detection, brighter tomorrows, A life saved, a future borrowed. Join our cause, take a stand, Together we heal, hand in hand."</p>
-                           <div class="read_bt"><a href="services.html">Our Services</a></div>
+                           <div class="read_bt"><a href="services.html" style="background-color: #555555;">Our Services</a></div>
                         </div>
                      </div>
                   </div>
@@ -149,7 +188,7 @@
                         <div class="col-sm-12">
                            <h1 class="banner_taital">Cancer Screening Services</h1>
                            <p class="banner_text">We provide free screening for breast, cervical, and oral cancers to women in underserved communities, helping to detect cancer at the earliest stages.</p>
-                           <div class="read_bt"><a href="programs.html">Our Programs</a></div>
+                           <div class="read_bt"><a href="programs.html" style="background-color: #555555;">Our Programs</a></div>
                         </div>
                      </div>
                   </div>
@@ -158,16 +197,16 @@
                         <div class="col-sm-12">
                            <h1 class="banner_taital">Children's Anemia Screening</h1>
                            <p class="banner_text">Our dedicated health program provides anemia screening and nutritional guidance to ensure every child gets the nourishment they need for healthy development.</p>
-                           <div class="read_bt"><a href="programs.html#children">Children's Programs</a></div>
+                           <div class="read_bt"><a href="programs.html#children" style="background-color: #555555;">Children's Programs</a></div>
                         </div>
                      </div>
                   </div>
                   <div class="carousel-item">
                      <div class="row">
                         <div class="col-sm-12">
-                           <h1 class="banner_taital">Join Our Mission</h1>
+                           <h1 class="banner_taital">JOIN<br>OUR<br>MISSION</h1>
                            <p class="banner_text">Become a volunteer, donate, or partner with us to help expand our reach and save more lives through early detection and prevention.</p>
-                           <div class="read_bt"><a href="join.html">Get Involved</a></div>
+                           <div class="read_bt"><a href="join.html" style="background-color: #555555;">Get Involved</a></div>
                         </div>
                      </div>
                   </div>
@@ -205,7 +244,7 @@
                      </div>
                   </div>
                   <div class="col-lg-4">
-                     <div class="box_main">
+                     <div class="box_main" style="background-color: #555555;">
                         <div class="icon_1"><img src="images/icon-2.png"></div>
                         <h4 class="volunteer_text">FUNDRAISE</h4>
                         <p class="lorem_text">Help us raise funds to support our screening camps and healthcare initiatives</p>
@@ -227,7 +266,7 @@
       </div>
       <!-- banner section end -->
       <!-- about section start -->
-      <div class="about_section layout_padding">
+      <div class="about_section layout_padding" style="background-color: #555555; color: #ffffff;">
          <div class="container">
             <div class="row">
                <div class="col-sm-8">
@@ -238,7 +277,7 @@
                   <div class="readmore_bt"><a href="about.html">Read more</a></div>
                </div>
                <div class="col-sm-4">
-                  <div class="about_img"><img src="images/about-img.png"></div>
+                  <div class="about_img"><img src="images/about-img-new.jpg"></div>
                   <!-- Recommended image: Team of healthcare professionals or screening camp photo -->
                </div>
             </div>
@@ -351,9 +390,9 @@
                </div>
             </div>
             <div class="news_section_2">
-               <div class="row">
+               <div class="row align-items-center">
                   <div class="col-md-6">
-                     <div class="news_img"><img src="images/news-img.png"></div>
+                     <div class="news_img"><img src="images/news-img.png" class="img-fluid"></div>
                      <!-- Recommended image: Education/awareness program with women and children -->
                   </div>
                   <div class="col-md-6">
@@ -368,10 +407,10 @@
                         • Corporate Wellness Initiatives<br>
                         • Free Health Checkup Camps
                      </p>
-                     <h5 class="raised_text">Our Goal: Reach 100,000 women and children by 2025</h5>
+                     <h5 class="raised_text" style="color: #d12670; font-weight: 700; margin-bottom: 25px;">WOMEN SCREENED - 4K+ | CHILDREN - 6K+</h5>
                      <div class="donate_btn_main">
                         <div class="readmore_btn"><a href="programs.html">View Programs</a></div>
-                        <div class="readmore_btn_1"><a href="donate.html">Support Us</a></div>
+                        <div class="readmore_btn"><a href="donate.html">Support Us</a></div>
                      </div>
                   </div>
                </div>
